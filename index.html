@@ -1,55 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hacked!!!</title>
-    <style>
-        body {
-            background-color: black;
-            color: lime;
-            font-family: 'Lucida Console', Monaco, monospace;
-            text-align: center;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        p {
-            font-size: 2em;
-            margin: 10;
-        }
-        @keyframes hacker {
-            0% {
-                transform: translateX(-50%);
-            }
-            50% {
-                transform: translateX(50%);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-        h1 {
-            animation: hacker 3s infinite;
-        }
-        .mainimage{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Hacklenmiştir</title>
+  <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Keania+One" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: Narkisim, sans-serif;
+    }
+    .absoluta {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
 </head>
-<body>
-    <h1>Hacked by TheChecker ~ TR Deki En Acımasız Sikici Hacker :D</h1>
-    <img src="images.jpeg" width="300" height="400" class="mainimage">
-    <p>Amk Adminleri sisteminizdeydim Şu Güvenliği düzeltin bu yılda xss açığı bırakanmı kaldı
-    </p>
+<body onkeydown="return false" oncontextmenu="return false">
+
+  <h2 style="color:red;">Bu Site <span style="color:white;">TheChecker</span> <span style="color:red;">Tarafından Hacklenmiştir</span></h2>
+
+  <!-- Müzik -->
+  <bgsound src="https://youtu.be/EZL_YWEgo24" loop="-1">
+  <embed src="https://youtu.be/EZL_YWEgo24" loop="true" autostart="true" height="1" width="1"></embed>
+
+  <p id="message">
+    <font size="3" color="white">[+] ^^ Kendi Ana Sayfam ^^ [+]</font><br>
+    <font size="5" color="red">------------------------------</font><br>
+    <font size="3" color="white">https://guns.lol/thechecker</font><br>
+    <font size="5" color="red">---------------------------------------------------------------------------</font><br>
+    <font size="3" color="white">??? Forumumuz ???</font><br>
+    <font size="5" color="red">-------------------</font><br>
+    <font size="5" color="red">darkcrack.com</font>
+  </p>
+
+  <font size="4" color="orange">~: [+] XD [+] :~</font><br>
+  <font size="7" face="Keania One" color="red">
+    Yapacağınız Sistemi Sikeyim <span style="color:white;">TheChecker</span>
+  </font>
+
+  <marquee scrollamount="3" scrolldelay="50" width="80%">
+    <font face="Iceland" size="4">Hacklenmiştir - TheChecker</font>
+  </marquee>
+
+  <script>
+    // Typing effect class
+    function TypingText(element, interval, cursor, finishedCallback) {
+      this.element = element;
+      this.finishedCallback = finishedCallback || function() {};
+      this.interval = interval || 100;
+      this.origText = this.element.innerHTML;
+      this.currentText = "";
+      this.currentChar = 0;
+      this.cursor = cursor || "";
+      this.running = false;
+      this.element.innerHTML = "";
+    }
+
+    TypingText.prototype.run = function() {
+      if (this.currentChar < this.origText.length) {
+        this.currentText += this.origText.charAt(this.currentChar);
+        this.element.innerHTML = this.currentText + this.cursor;
+        this.currentChar++;
+        setTimeout(this.run.bind(this), this.interval);
+      } else {
+        this.element.innerHTML = this.currentText;
+        this.finishedCallback();
+      }
+    };
+
+    // Çalıştır
+    const msg = document.getElementById("message");
+    const typer = new TypingText(msg, 55, "|");
+    typer.run();
+  </script>
+
 </body>
 </html>
